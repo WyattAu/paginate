@@ -1,4 +1,4 @@
-# api-paginate
+# paginate
 
 Pagination types for Rust APIs — offset-based and cursor-based pagination with OpenAPI support.
 
