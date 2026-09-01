@@ -6,6 +6,8 @@ edition = "2024"
 rust-version = "1.85"
 license = "MIT OR Apache-2.0"
 repository = "https://github.com/WyattAu/paginate"
+keywords = ["pagination", "api", "cursor"]
+categories = ["web-programming"]
 readme = "README.md"
 exclude = ["/target"]
 
@@ -23,5 +25,6 @@ name = "paginate_bench"
 harness = false
 
 [dev-dependencies]
+proptest = "1"
 serde_json = "1"
 criterion = { version = "0.5", features = ["html_reports"] }
