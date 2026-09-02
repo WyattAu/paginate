@@ -1,4 +1,5 @@
 #![forbid(unsafe_code)]
+#![deny(missing_docs)]
 //! Pagination types for Rust APIs.
 //!
 //! Provides offset-based and cursor-based pagination primitives with
