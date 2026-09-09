@@ -2,7 +2,7 @@
 
 use proptest::prelude::*;
 
-use api_paginate::{PaginationParams, PaginatedResponse, CursorPagination};
+use api_paginate::{CursorPagination, PaginatedResponse, PaginationParams};
 
 #[test]
 fn page_always_at_least_1() {
@@ -29,13 +29,9 @@ fn offset_consistent_with_page_and_per_page() {
     });
 }
 
-#[test]
-fn offset_always_non_negative() {
-    proptest!(|(page in 0u32..10_000u32, per_page in 1u32..100u32)| {
-        let params = PaginationParams::new(page, per_page);
-        prop_assert!(params.offset() >= 0);
-    });
-}
+// Note: an "offset is non-negative" proptest was removed — `offset()` is
+// `usize`, so non-negativity is guaranteed by the type and the assertion
+// tripped `clippy::absurd_extreme_comparisons` under `-D warnings`.
 
 #[test]
 fn default_params() {

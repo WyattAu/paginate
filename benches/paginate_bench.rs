@@ -1,5 +1,5 @@
-use criterion::{criterion_group, criterion_main, Criterion};
-use api_paginate::{PaginationParams, PaginatedResponse, CursorPagination, CursorResponse};
+use api_paginate::{CursorPagination, CursorResponse, PaginatedResponse, PaginationParams};
+use criterion::{Criterion, criterion_group, criterion_main};
 
 fn bench_pagination_params_creation(c: &mut Criterion) {
     c.bench_function("pagination_params_creation", |b| {
@@ -9,7 +9,7 @@ fn bench_pagination_params_creation(c: &mut Criterion) {
 
 fn bench_pagination_params_default(c: &mut Criterion) {
     c.bench_function("pagination_params_default", |b| {
-        b.iter(|| PaginationParams::default());
+        b.iter(PaginationParams::default);
     });
 }
 
@@ -54,7 +54,7 @@ fn bench_cursor_pagination_creation(c: &mut Criterion) {
 
 fn bench_cursor_pagination_default(c: &mut Criterion) {
     c.bench_function("cursor_pagination_default", |b| {
-        b.iter(|| CursorPagination::default());
+        b.iter(CursorPagination::default);
     });
 }
 
@@ -72,7 +72,7 @@ fn bench_cursor_response_creation(c: &mut Criterion) {
 
 fn bench_cursor_response_empty(c: &mut Criterion) {
     c.bench_function("cursor_response_empty", |b| {
-        b.iter(|| CursorResponse::<i32>::empty());
+        b.iter(CursorResponse::<i32>::empty);
     });
 }
 
