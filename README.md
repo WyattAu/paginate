@@ -1,5 +1,9 @@
 # api-paginate
 
+[![docs.rs](https://docs.rs/api-paginate/badge.svg)](https://docs.rs/api-paginate)
+[![crates.io](https://img.shields.io/crates/v/api-paginate.svg)](https://crates.io/crates/api-paginate)
+[![License](https://img.shields.io/badge/license-MIT%2FApache--2.0-blue.svg)](LICENSE)
+
 Pagination types for Rust APIs — offset-based and cursor-based pagination with OpenAPI support.
 
 ## Overview
