@@ -1,7 +1,7 @@
 [package]
 name = "api-paginate"
-description = "Pagination types for Rust APIs — offset-based and cursor-based pagination with OpenAPI support"
-version = "0.1.0"
+description = "Pagination types for Rust APIs: offset-based and cursor-based pagination with OpenAPI support"
+version = "0.1.2"
 edition = "2024"
 rust-version = "1.85"
 license = "MIT OR Apache-2.0"
