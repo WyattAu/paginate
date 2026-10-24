@@ -1,4 +1,5 @@
 # api-paginate
+[![Estate integration](https://github.com/WyattAu/estate-integration/actions/workflows/ci.yml/badge.svg)](https://github.com/WyattAu/estate-integration/actions/workflows/ci.yml)
 
 [![docs.rs](https://docs.rs/api-paginate/badge.svg)](https://docs.rs/api-paginate)
 [![crates.io](https://img.shields.io/crates/v/api-paginate.svg)](https://crates.io/crates/api-paginate)
