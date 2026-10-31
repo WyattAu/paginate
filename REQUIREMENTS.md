@@ -1,10 +1,10 @@
-# Requirements — paginate
+# Requirements: paginate
 
 Numbered, testable requirements. Every requirement maps to at least one named
 test; every security-relevant test cites at least one requirement. Threat
 IDs reference `THREAT-MODEL.md`.
 
-Scope note: `api-paginate` provides pagination types for Rust APIs —
+Scope note: `api-paginate` provides pagination types for Rust APIs -
 offset-based (`PaginationParams`, `PaginatedResponse`) and cursor-based
 (`CursorPagination`, `CursorResponse`) pagination with OpenAPI schema
 support. Pure computation: clamping, page math, and windowing only.
@@ -24,7 +24,7 @@ support. Pure computation: clamping, page math, and windowing only.
 
 | ID | Requirement | Priority |
 |----|-------------|----------|
-| REQ-PG-100 | `page` is clamped to ≥ 1 and `per_page` to `[1, 100]` before any offset multiplication — no overflow or zero-division panic from hostile query params (T1) | MUST |
+| REQ-PG-100 | `page` is clamped to ≥ 1 and `per_page` to `[1, 100]` before any offset multiplication; no overflow or zero-division panic from hostile query params (T1) | MUST |
 | REQ-PG-101 | Result windows are bounded: no client-supplied input can request more than the per-page ceiling (T2) | MUST |
 | REQ-PG-102 | Cursor limits are clamped so a forged cursor cannot demand unbounded rows (T3) | MUST |
 | REQ-PG-103 | No panic path exists on any input: clamping is total and total-pages math is division-safe (T5) | MUST |

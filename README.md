@@ -5,7 +5,7 @@
 [![crates.io](https://img.shields.io/crates/v/api-paginate.svg)](https://crates.io/crates/api-paginate)
 [![License](https://img.shields.io/badge/license-MIT%2FApache--2.0-blue.svg)](LICENSE)
 
-Pagination types for Rust APIs — offset-based and cursor-based pagination with OpenAPI support.
+Pagination types for Rust APIs; offset-based and cursor-based pagination with OpenAPI support.
 
 ## Overview
 
@@ -13,11 +13,11 @@ Pagination types for Rust APIs — offset-based and cursor-based pagination with
 
 ## Features
 
-- **Offset-based pagination** — `PaginationParams` and `PaginatedResponse<T>` for traditional page/per_page APIs
-- **Cursor-based pagination** — `CursorPagination` and `CursorResponse<T>` for keyset/cursor APIs
-- **OpenAPI support** — optional `utoipa` derives via the `openapi` feature
-- **Serde support** — optional serialization via the `serde_impl` feature (enabled by default)
-- **No `unsafe`** — the crate uses `#![forbid(unsafe_code)]`
+- **Offset-based pagination**; `PaginationParams` and `PaginatedResponse<T>` for traditional page/per_page APIs
+- **Cursor-based pagination**; `CursorPagination` and `CursorResponse<T>` for keyset/cursor APIs
+- **OpenAPI support**; optional `utoipa` derives via the `openapi` feature
+- **Serde support**; optional serialization via the `serde_impl` feature (enabled by default)
+- **No `unsafe`**; the crate uses `#![forbid(unsafe_code)]`
 
 ## Usage
 
@@ -56,7 +56,7 @@ assert_eq!(response.cursor.as_deref(), Some("next_cursor"));
 Without `paginate`, you'd write something like:
 
 ```rust
-// Manual approach — error-prone, repetitive
+// Manual approach; error-prone, repetitive
 struct Params { page: u32, per_page: u32 }
 
 let page = params.page.max(1);
